@@ -41,15 +41,15 @@ $(function () {
               titleFormat: 'YYYY年 M月',
               dayNamesShort: ['日','月','火','水','木','金','土'],
               header: {
-                left: 'prev, next, today',
+                left: 'prev, next',
                 center: 'title',
                 right: 'month, agendaWeek, agendaDay, listMonth',
               },
               buttonText: {
-                today: '今日',
                 month: '月',
                 week: '週',
                 day: '日',
+                list: 'タスクリスト',
               },
           });
       }

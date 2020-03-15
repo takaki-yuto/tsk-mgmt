@@ -20,5 +20,6 @@
   <%= @event.end_date %>
 </p>
 
+<%= link_to 'Destroy', @event, method: :delete, data: { confirm: '本当に予定を消しますか？' } %> |
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

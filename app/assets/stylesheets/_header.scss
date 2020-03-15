@@ -1,0 +1,52 @@
+.left-btn:hover {
+  background: #fffbef;
+}
+
+.right-btn:hover {
+  background: #fffbef;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Unica+One);
+
+.test:hover {
+  display: none;
+}
+
+.test {
+  font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+/* ヘッダー */
+.header-fixed {
+  background-color: white;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 0 8px gray;
+  .header-box {
+    padding: 20px 20px;
+    display: flex;
+    .left-btn {
+      margin-left: calc(100% - 20%);
+      margin-right: 20px;
+      padding: 0.3em 1em;
+      text-decoration: none;
+      color: #67c5ff;
+      border: solid 2px #67c5ff;
+      border-radius: 3px;
+      transition: .4s;
+    }
+    .right-btn {
+      margin-right: 20px;
+      padding: 0.3em 1em;
+      text-decoration: none;
+      color: #67c5ff;
+      border: solid 2px #67c5ff;
+      border-radius: 3px;
+      transition: .4s;
+    }
+  }
+}
