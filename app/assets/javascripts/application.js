@@ -51,6 +51,9 @@ $(function () {
                 day: '日',
                 list: 'タスクリスト',
               },
+              eventClick: function(event) {
+                console.log(event);
+              },
           });
       }
   });

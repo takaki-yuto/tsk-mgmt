@@ -1,0 +1,29 @@
+.backimage-body::before {
+  background: inherit;
+  content: '';
+  filter: blur(5px);
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+}
+
+.backimage-body {
+  margin-top: 10px;
+  height: 700px;
+  background-image: image-url("calendar.jpg");
+  background-size: cover;
+  position: relative;
+  .devise-box {
+    padding: 20px 500px;
+    .devise-post{
+      text-align: center;
+      border-radius: 10px;
+      background-color:  white;            /* 背景色指定 */
+      box-shadow: 2px 2px 2px 2px #bbb;   /* 影指定 */
+      position:relative;
+      z-index:1;
+    }
+  }
+}
