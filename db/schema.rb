@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_13_163617) do
+ActiveRecord::Schema.define(version: 2020_03_18_172811) do
 
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
@@ -18,6 +18,33 @@ ActiveRecord::Schema.define(version: 2020_03_13_163617) do
     t.text "description"
     t.datetime "start_date"
     t.datetime "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "content"
+    t.bigint "report_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["report_id"], name: "index_messages_on_report_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
+  create_table "report_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "report_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["report_id"], name: "index_report_users_on_report_id"
+    t.index ["user_id"], name: "index_report_users_on_user_id"
+  end
+
+  create_table "reports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
+    t.string "message"
+    t.string "create_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -36,4 +63,8 @@ ActiveRecord::Schema.define(version: 2020_03_13_163617) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "messages", "reports"
+  add_foreign_key "messages", "users"
+  add_foreign_key "report_users", "reports"
+  add_foreign_key "report_users", "users"
 end
