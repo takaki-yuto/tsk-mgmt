@@ -2,22 +2,6 @@
 <html>
   <head>
     <title>TskMgmt</title>
-    <div class="header-fixed">
-      <% if user_signed_in? %>
-        <div class="user_nav header-box">
-          <%= link_to  "tsk-mgmt", "/", class: "test" %>
-          <%= link_to "ログアウト", destroy_user_session_path, class: "left-btn",method: :delete %>
-          <%= link_to  "予定追加", new_event_path, class: "right-btn" %>
-        </div>
-      <% else %>
-        <div class="header-box">
-          <%= link_to  "tsk-mgmt", "/", class: "test" %>
-          <%= link_to "ログイン", new_user_session_path, class: 'left-btn' %>
-          <%= link_to "新規登録", new_user_registration_path, class: 'right-btn' %>
-        </div>
-      <% end %>
-    </div>
-
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -26,6 +10,23 @@
   </head>
 
   <body>
+    <div class="header-fixed">
+      <% if user_signed_in? %>
+        <div class="user_nav header-box">
+          <%= link_to  "tsk-mgmt", "/", class: "title-bar" %>
+          <%= link_to "ログアウト", destroy_user_session_path, class: "left-btn",method: :delete %>
+          <%= link_to "日報送信", "#", class: "report-post"%>
+          <%= link_to "日報管理", "#", class: "report-mgmt"%>
+          <%= link_to  "予定追加", new_event_path, class: "right-btn" %>
+        </div>
+      <% else %>
+        <div class="header-box">
+          <%= link_to  "tsk-mgmt", "/", class: "title-bar" %>
+          <%= link_to "ログイン", new_user_session_path, class: 'left-btn' %>
+          <%= link_to "新規登録", new_user_registration_path, class: 'right-btn' %>
+        </div>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>

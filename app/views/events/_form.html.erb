@@ -11,27 +11,29 @@
     </div>
   <% end %>
 
+<div class="form-field">
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :タイトル %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
+    <%= form.label :内容 %>
     <%= form.text_area :description %>
   </div>
 
   <div class="field">
-    <%= form.label :start_date %>
+    <%= form.label :開始時間 %>
     <%= form.datetime_select :start_date %>
   </div>
 
   <div class="field">
-    <%= form.label :end_date %>
+    <%= form.label :終了時間 %>
     <%= form.datetime_select :end_date %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+</div>
 <% end %>

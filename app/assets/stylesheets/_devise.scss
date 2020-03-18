@@ -11,7 +11,7 @@
 
 .backimage-body {
   margin-top: 10px;
-  height: 700px;
+  height: 900px;
   background-image: image-url("calendar.jpg");
   background-size: cover;
   position: relative;
@@ -20,8 +20,8 @@
     .devise-post{
       text-align: center;
       border-radius: 10px;
-      background-color:  white;            /* 背景色指定 */
-      box-shadow: 2px 2px 2px 2px #bbb;   /* 影指定 */
+      background-color:  white;
+      box-shadow: 2px 2px 2px 2px #bbb;
       position:relative;
       z-index:1;
     }
