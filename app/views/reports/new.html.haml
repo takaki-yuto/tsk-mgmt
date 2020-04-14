@@ -1,0 +1,6 @@
+.content_title
+  日報作成
+= form_with model: @report, class: :form, local: true do |form|
+  = form.text_field :title, placeholder: :タイトル, class: :form_title
+  = form.text_area :message, placeholder: :ブログ本文, class: :form_text
+  = form.submit '投稿する', class: :form_btn

@@ -1,0 +1,26 @@
+.content_title {
+  text-align: center;
+}
+
+.form{
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 30px;
+  .form_title{
+    display: block;
+    width: 100%;
+    height: 50px;
+  }
+  .form_text{
+    display: block;
+    width: 100%;
+    height: 200px;
+    margin-top: 15px;
+  }
+  .form_btn{
+    display: block;
+    width: 10%;
+    margin: 15px auto 0;
+  }
+}
