@@ -43,8 +43,11 @@ html {
   .header-box {
     padding: 20px 20px;
     display: flex;
+    .user-name {
+      margin: 5px 20px 0 auto;
+      color: black;
+    }
     .left-btn {
-      margin-left: calc(100% - 35%);
       margin-right: 20px;
       padding: 0.3em 1em;
       text-decoration: none;

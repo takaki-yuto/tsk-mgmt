@@ -1,0 +1,18 @@
+%p#notice= notice
+%p
+  %strong タイトル
+  = @event.title
+%p
+  %strong 内容
+  = @event.description
+%p
+  %strong 開始時間
+  = @event.start_date
+%p
+  %strong 終了時間
+  = @event.end_date
+= link_to 'Destroy', @event, method: :delete, data: { confirm: '本当に予定を消しますか？' }
+|
+= link_to 'Edit', edit_event_path(@event)
+|
+= link_to 'Back', events_path
