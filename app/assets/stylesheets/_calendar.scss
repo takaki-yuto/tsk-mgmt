@@ -175,7 +175,8 @@
               font-size: 14px;
               cursor: pointer;
               text-align: center;
-              background-color: red;
+              background: #3CCACE;
+              border: 1px solid #3CCACE;
               color: #fff;
             }
           }
@@ -194,6 +195,31 @@
             cursor: pointer;
             text-decoration: none;
             background-color: none;
+          }
+        }
+        .tsk-change-btn {
+          display: flex;
+          justify-content: space-evenly;
+          .link-btn {
+            text-decoration: none;
+            .delete-btn {
+              line-height: 48px;
+              background: #FF0000;
+              border: 1px solid #FF0000;
+              color: #fff;
+              width: 120px;
+              font-size: 18px;
+              border-radius: 100px;
+            }
+            .edit-btn {
+              line-height: 48px;
+              background: #3CCACE;
+              border: 1px solid #3CCACE;
+              color: #fff;
+              width: 120px;
+              font-size: 18px;
+              border-radius: 100px;
+            }
           }
         }
       }

@@ -1,18 +1,32 @@
-%p#notice= notice
-%p
-  %strong タイトル
-  = @event.title
-%p
-  %strong 内容
-  = @event.description
-%p
-  %strong 開始時間
-  = @event.start_date
-%p
-  %strong 終了時間
-  = @event.end_date
-= link_to 'Destroy', @event, method: :delete, data: { confirm: '本当に予定を消しますか？' }
-|
-= link_to 'Edit', edit_event_path(@event)
-|
-= link_to 'Back', events_path
+.backimage-body-plan
+  .form-body-plan
+    .field-contener-plan
+      .registration 
+        = @event.start_date.strftime("%m月%d日") + "の予定"
+      .form-box-plan
+        .form-box
+          .form-group
+            %label タイトル
+            %br/
+            = @event.title
+          .form-group
+            %label 内容
+            %br/
+            = @event.description
+          .form-group
+            %label 開始時間
+            %br/
+            = @event.start_date.strftime("%Y年%m月%d日 %H時%M分")
+          .form-group
+            %label 終了時間
+            %br/
+            = @event.end_date.strftime("%Y年%m月%d日 %H時%M分")
+          .tsk-change-btn
+            = link_to  @event, method: :delete, data: { confirm: '本当に予定を消しますか？' }, class: "link-btn" do
+              %button.delete-btn{type: "submit"}
+                予定削除
+            = link_to  edit_event_path(@event), class: "link-btn" do
+              %button.edit-btn{type: "submit"}
+                編集
+          .top-page-link
+            = link_to 'トップへ戻る', events_path, class: "top-btn"
