@@ -7,18 +7,25 @@
       %ul
         - event.errors.full_messages.each do |message|
           %li= message
-  .form-field
-    .field
-      = form.label :タイトル
-      = form.text_field :title
-    .field
-      = form.label :内容
-      = form.text_area :description
-    .field
-      = form.label :開始時間
-      = form.datetime_select :start_date
-    .field
-      = form.label :終了時間
-      = form.datetime_select :end_date
-    .actions
-      = form.submit
+  .field-contener-plan
+    .registration 予定追加
+    .form-box-plan
+      .form-box
+        .form-group
+          = form.label :タイトル
+          = form.text_field :title, class: "title-text"
+        .form-group
+          = form.label :内容
+          = form.text_area :description, class: "text-field"
+        .form-group
+          = form.label :開始時間
+          %br/
+          = form.datetime_select(:start_date, use_month_numbers: true, date_separator: "/")
+        .form-group
+          = form.label :終了時間
+          %br/
+          = form.datetime_select(:end_date, use_month_numbers: true, date_separator: "/")
+        .actions
+          = form.submit "追加", class: "next-btn"
+        .top-page-link
+          = link_to 'トップページへ戻る', events_path, class: "top-btn"

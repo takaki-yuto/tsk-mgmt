@@ -11,6 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
+//= require popper
+//= require bootstrap
+//= require summernote/summernote-bs4.min
 //= require moment
 //= require fullcalendar
 //= require rails-ujs
@@ -21,6 +25,13 @@
 $(function () {
   // 画面遷移を検知
   $(document).on('turbolinks:load', function () {
+    $('[data-provider="summernote"]').each(function(){
+      $(this).summernote({
+      lang: "ja-JP",
+      height: 500,
+      fontNames: ["YuGothic","Yu Gothic","Hiragino Kaku Gothic Pro","Meiryo","sans-serif", "Arial","Arial Black","Comic Sans MS","Courier New","Helvetica Neue","Helvetica","Impact","Lucida Grande","Tahoma","Times New Roman","Verdana"],
+      });
+    })
       // lengthを呼び出すことで、#calendarが存在していた場合はtrueの処理がされ、無い場合はnillを返す
       if ($('#calendar').length) {
           function eventCalendar() {

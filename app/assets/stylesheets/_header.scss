@@ -16,18 +16,18 @@
 
 @import url(http://fonts.googleapis.com/css?family=Unica+One);
 
-.title-bar:hover {
-  display: none;
-}
+// .title-bar:hover {
+//   display: none;
+// }
 
 .title-bar {
-  font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
-  font-size: 25px;
-  text-decoration: none;
+  width: 200px;
+  height: 40px;
 }
 
-html {
-  margin-top: 70px;
+body {
+  padding-top: 60px;
+  background-color: #EEEEEE;
 }
 
 /* ヘッダー */
@@ -41,7 +41,7 @@ html {
   height: 60px;
   box-shadow: 0 0 8px gray;
   .header-box {
-    padding: 20px 20px;
+    padding: 10px 20px;
     display: flex;
     .user-name {
       margin: 5px 20px 0 auto;

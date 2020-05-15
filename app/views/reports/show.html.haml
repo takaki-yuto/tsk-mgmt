@@ -1,0 +1,32 @@
+.myreport-content
+  .myreport-box
+    .title-box
+      件名：
+      = @report.title
+    .from-box
+      from： 
+      = @fromuser[0].name
+    .address-box
+      To：
+      - @report.users.each do |user|
+        = user.name
+        ,
+    .text-box
+      = @report.message.html_safe
+  .message-content
+    メッセージ
+    - @messages.each do |message|
+      .message-box
+        .upper-message
+          .user-name
+            = message.user.name
+          .date-time
+            = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+        .lower-message
+          .message-text
+            = message.content
+  .message-form
+    = form_for [@report, @message], html: {class: 'new-message'} do |f|
+      .input-box
+        = f.text_field :content, class: 'text', placeholder: 'ここにテキストを入力してください'
+        = f.submit '送信', class: 'send-btn'

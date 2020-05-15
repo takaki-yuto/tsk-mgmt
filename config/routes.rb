@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  get 'messages/index'
   devise_for :users
-  resources :events
-  resources :reports, only: [:index, :new, :create]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'events#index'
+
+  resources :users, only: [:index, :edit, :update]
+  resources :events
+  resources :reports, only: [:index, :new, :create, :show] do
+    resources :messages, only: [:index, :create]
+  end
 end
