@@ -1,0 +1,154 @@
+.report-content {
+  display: flex;
+  justify-content: center;
+  //自分の日報
+  .myreport-content {
+    padding-top: 20px;
+    width: 40%;
+    height: 120vh;
+    background-color: #EEEEEE;
+    margin-right: 80px;
+    .report-box {
+      margin-top: 30px;
+      width: 100%;
+      height: 100px;
+      .report-group {
+        margin: 30px auto;
+        width: 90%;
+        height: 100%;
+        background-color: white;
+        border-radius: 10px;
+        .report-link-btn {
+          text-decoration: none;
+          color: black;
+          .report-time {
+            font-size: 20px;
+          }
+          .report-title {
+            font-size: 20px;
+          }
+          .report-startmessage {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .pagenate-box {
+      float: right;
+      margin-bottom: 30px;
+      text-decoration: none;
+    }
+  }
+  //送信されてきた日報
+  .reply-content {
+    padding-top: 20px;
+    width: 40%;
+    height: 120vh;
+    background-color: #EEEEEE;
+    .report-box {
+      margin-top: 30px;
+      width: 100%;
+      height: 100px;
+      .report-group {
+        margin: 30px auto;
+        width: 90%;
+        height: 100%;
+        background-color: white;
+        border-radius: 10px;
+        .report-link-btn {
+          text-decoration: none;
+          color: black;
+          .report-time {
+            font-size: 20px;
+          }
+          .report-title {
+            font-size: 20px;
+          }
+          .report-startmessage {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .pagenate-box {
+      float: right;
+      margin-bottom: 30px;
+      text-decoration: none;
+    }
+  }
+}
+
+.myreport-content {
+  .myreport-box  {
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: white;
+    .title-box {
+      border-bottom: solid 1px #333;
+    }
+    .from-box {
+      border-bottom: solid 1px #333;
+    }
+    .address-box {
+      border-bottom: solid 1px #333;
+    }
+    .text-box {
+      height: 500px;
+      overflow:auto;
+      border-bottom: solid 1px #333;
+    }
+  }
+  .message-content {
+    font-size: 30px;
+    width: 60%;
+    height: 350px;
+    margin: 10px auto 10px;
+    overflow: scroll;
+    border-radius: 10px;
+    background-color: white;
+    .message-box {
+      width: 100%;
+      height: 50px;
+      .upper-message {
+        display: flex;
+        .user-name {
+          font-size: 16px;
+        }
+        .date-time {
+          margin-left: 5px;
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+      .lower-message {
+        .message-text {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .message-form {
+    font-size: 25px;
+    width: 60%;
+    margin: 0 auto 30px;
+    .input-box {
+      width: 100%;
+      .text {
+        color: #434a54;
+        border-style: none;
+        height: 50px;
+        padding: 0px 40px 0px 10px;
+        width: 89%;
+      }
+      .send-btn {
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 10px;
+        color: white;
+        background-color: #38aef0;
+      }
+    }
+  }
+}

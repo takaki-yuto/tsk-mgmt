@@ -1,6 +1,30 @@
 .content_title
   日報作成
-= form_with model: @report, class: :form, local: true do |form|
-  = form.text_field :title, placeholder: :タイトル, class: :form_title
-  = form.text_area :message, placeholder: :ブログ本文, class: :form_text
-  = form.submit '投稿する', class: :form_btn
+= form_with model: @report, class: :form, local: true do |f|
+  .chat-group-form__field--right
+    .chat-group-form__search.clearfx
+      %input#user-search-field.chat-group-form__input{:placeholder => "追加したいユーザー名を入力してください", :type => "text"}/
+    #user-search-result
+
+  .chat-group-form__field.clearfix
+    .chat-group-form__field--left
+      %label.chat-group-form__label{:for => "chat_group_チャットメンバー"} チャットメンバー
+    .chat-group-form__field--right
+
+      #chat-group-users.js-add-user
+        .chat-group-user.clearfix.js-chat-member
+          %input{name: "report[user_ids][]", type: "hidden", value: current_user.id}
+          %p.chat-group-user__name= current_user.name
+
+        - @report.users.each do |user|
+          - if current_user.name != user.name
+            .chat-group-user.clearfix.js-chat-member
+              %input{name: "report[user_ids][]", type: "hidden", value: user.id}
+              %p.chat-group-user__name
+                = user.name 
+              %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn
+                削除
+
+  = f.text_field :title, placeholder: :タイトル, class: :form_title
+  = f.text_area :message, placeholder: :ブログ本文, class: :form_text, 'data-provider': :summernote
+  = f.submit '送信する', class: :form_btn

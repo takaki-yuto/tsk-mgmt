@@ -44,9 +44,10 @@ ActiveRecord::Schema.define(version: 2020_03_18_172811) do
   create_table "reports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.string "message"
-    t.string "create_name"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_reports_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -67,4 +68,5 @@ ActiveRecord::Schema.define(version: 2020_03_18_172811) do
   add_foreign_key "messages", "users"
   add_foreign_key "report_users", "reports"
   add_foreign_key "report_users", "users"
+  add_foreign_key "reports", "users"
 end

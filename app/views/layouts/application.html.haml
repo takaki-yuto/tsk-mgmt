@@ -10,12 +10,13 @@
   %body
     .header-fixed
       .user_nav.header-box
-        = link_to  "tsk-mgmt", "/", class: "title-bar"
+        = link_to "/" do
+          = image_tag "logo.png", class: "title-bar"
         - if user_signed_in?
           .user-name
             = current_user.name
           = link_to "ログアウト", destroy_user_session_path, class: "left-btn",method: :delete
-          = link_to "日報送信", new_report_path, class: "report-post"
+          = link_to "日報送信", new_report_path, class: "report-post", "data-turbolinks": false
           = link_to "日報管理", reports_path, class: "report-mgmt"
           = link_to  "予定追加", new_event_path, class: "right-btn"
       -# - else
