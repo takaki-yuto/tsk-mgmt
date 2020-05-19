@@ -1,8 +1,16 @@
 .backimage-body
   = form_for(resource, as: resource_name, url: session_path(resource_name),html: { class: "form-body" }) do |f|
     .field-contener
-      .registration ログイン
+      -# .registration ログイン
       .registration-form
+        .title-box
+          .title-name
+            tsk-mgmt
+          .title-exposition
+            日々の進捗管理と日報管理を一つにしてみませんか？
+          %i.far.fa-calendar-alt.fa-8x.clender
+          %i.fas.fa-plus.fa-5x.plus
+          %i.far.fa-clipboard.fa-8x.report
         .form-box
           .form-group
             = f.label :メールアドレス
@@ -15,6 +23,3 @@
           .new-user-actions
             アカウントをお持ちでない方はこちらから
             %a{ href: new_registration_path(resource_name), class:'new-user-btn' } 新規登録
-        //= link_to "新規登録", new_registration_path(resource_name)
-        //|
-        //\#{link_to "パスワードをお忘れですか？", new_password_path(resource_name)}

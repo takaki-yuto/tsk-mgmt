@@ -72,7 +72,7 @@ gem 'execjs'
 gem 'jquery-turbolinks'
 gem 'kaminari'
 gem 'rails-i18n'
-gem 'therubyracer'
+gem 'mini_racer'
 
 gem 'devise'
 gem 'pry-rails'

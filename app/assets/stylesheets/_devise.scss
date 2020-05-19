@@ -20,7 +20,7 @@
     position:relative;
     z-index:1;
     .field-contener{
-      width: 700px;
+      width: 1100px;
       margin: 0 auto;
       border-radius: 10px;
       background-color: white;
@@ -31,8 +31,29 @@
         font-weight: bold;
       }
       .registration-form {
-        padding: 0 40px 60px;
+        padding: 60px 40px 60px;
         margin-bottom: 80px;
+        display: flex;
+        .title-box {
+          .title-name {
+            color: black;
+            font-size: 30px;
+            font-weight: bold;
+          }
+          .title-exposition {
+            margin: 20px 0 70px 20px;
+          }
+          .clender {
+            margin-left: 80px;
+            color: blue;
+          }
+          .plus {
+            margin: 0 30px;
+          }
+          .report {
+            color: red;
+          }
+        }
         .form-box {
           margin: 0 auto;
           max-width: 300px;
