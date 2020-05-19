@@ -11,8 +11,8 @@ class MessagesController < ApplicationController
     if @message.save
       redirect_to report_path(@report)
     else
-      @messages = @report.messages.includes(:user)
-      flash.now[:alert] = 'メッセージを入力してください。'
+      # @messages = @report.messages.includes(:user)
+      # flash.now[:alert] = 'メッセージを入力してください。'
       redirect_to report_path(@report)
     end
   end

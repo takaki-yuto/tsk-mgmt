@@ -71,6 +71,8 @@ gem 'simple_form'
 gem 'execjs'
 gem 'jquery-turbolinks'
 gem 'kaminari'
+gem 'rails-i18n'
+gem 'therubyracer'
 
 gem 'devise'
 gem 'pry-rails'
