@@ -18,11 +18,11 @@
           = form.label :内容
           = form.text_area :description, class: "text-field"
         .form-group
-          = form.label :開始時間
+          = form.label :開始予定時間
           %br/
           = form.datetime_select(:start_date, use_month_numbers: true, date_separator: "/")
         .form-group
-          = form.label :終了時間
+          = form.label :終了予定時間
           %br/
           = form.datetime_select(:end_date, use_month_numbers: true, date_separator: "/")
         .actions

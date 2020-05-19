@@ -1,34 +1,35 @@
-.report-content
-  .myreport-content
-    送信BOX
-    .report-box
-      - @myreports.each do |report|
-        .report-group
-          = link_to report_path(report), class:"report-link-btn" do
-            .report-time
-              日付：
-              = report.created_at.strftime("%Y年%m月%d日 %H時%M分")
-            .report-title
-              タイトル：
-              = report.title
-            .report-startmessage
-              本日の日報を提出いたします。
-      .pagenate-box
-        = paginate @myreports, param_name: 'myreport'
-  .reply-content
-    受信BOX
-    .report-box
-      - @replyreports_sin.each do |replyreport|
-        .report-group
-          = link_to report_path(replyreport), class:"report-link-btn" do
-            .report-time
-              日付：
-              = replyreport.created_at.strftime("%Y年%m月%d日 %H時%M分")
-            .report-title
-              タイトル：
-              = replyreport.title
-            .report-startmessage
-              本日の日報を提出いたします。
-      .pagenate-box
-        = paginate @replyreports_sin, param_name: 'replyreport'
-  
+.backimage-body-report
+  .report-content
+    .myreport-content
+      %label 送信BOX
+      .report-box
+        - @myreports.each do |report|
+          .report-group
+            = link_to report_path(report), class:"report-link-btn" do
+              .report-time
+                日付：
+                = report.created_at.strftime("%Y年%m月%d日 %H時%M分")
+              .report-title
+                タイトル：
+                = report.title
+              .report-startmessage
+                本日の日報を提出いたします。
+        .pagenate-box
+          = paginate @myreports, param_name: 'myreport'
+    .reply-content
+      %label 受信BOX
+      .report-box
+        - @replyreports_sin.each do |replyreport|
+          .report-group
+            = link_to report_path(replyreport), class:"report-link-btn" do
+              .report-time
+                日付：
+                = replyreport.created_at.strftime("%Y年%m月%d日 %H時%M分")
+              .report-title
+                タイトル：
+                = replyreport.title
+              .report-startmessage
+                本日の日報を提出いたします。
+        .pagenate-box
+          = paginate @replyreports_sin, param_name: 'replyreport'
+    

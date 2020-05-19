@@ -14,11 +14,11 @@
             %br/
             = @event.description
           .form-group
-            %label 開始時間
+            %label 開始予定時間
             %br/
             = @event.start_date.strftime("%Y年%m月%d日 %H時%M分")
           .form-group
-            %label 終了時間
+            %label 終了予定時間
             %br/
             = @event.end_date.strftime("%Y年%m月%d日 %H時%M分")
           .tsk-change-btn

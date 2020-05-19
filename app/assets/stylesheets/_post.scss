@@ -1,26 +1,65 @@
-.content_title {
-  text-align: center;
+.backimage-body-report::before {
+  background: inherit;
+  content: '';
+  filter: blur(5px);
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
 }
 
-.form{
-  width: 85%;
-  height: 100%;
-  margin: 0 auto;
-  padding-top: 30px;
-  .form_title{
-    display: block;
-    width: 100%;
-    height: 50px;
-  }
-  .form_text{
-    display: block;
-    width: 100%;
-    height: 200px;
-    margin-top: 15px;
-  }
-  .form_btn{
-    display: block;
-    width: 10%;
-    margin: 15px auto 0;
+.backimage-body-report {
+  margin-top: 10px;
+  padding-top: 10px;
+  height: 1080px;
+  background-image: image-url("calendar.jpg");
+  background-size: cover;
+  position: relative;
+  .form-body-report {
+    position:relative;
+    z-index:1;
+    .field-contener-report {
+      width: 1000px;
+      margin: 0 auto;
+      padding-bottom: 20px;
+      border-radius: 10px;
+      background-color: white;
+      .report-title {
+        text-align: center;
+        padding: 32px;
+        font-size: 22px;
+        font-weight: bold;
+      }
+      .form{
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding-top: 30px;
+        label {
+          margin-top: 5px;
+          font-weight: bold;
+          text-align: left;
+        }
+        .form_title{
+          display: block;
+          width: 100%;
+          height: 50px;
+        }
+        .form_text{
+          display: block;
+          width: 100%;
+          height: 200px;
+          margin-top: 15px;
+        }
+        .send-btn {
+          margin: 15px 0 0 44%;
+          width: 100px;
+          height: 50px;
+          color: white;
+          background-color: #38aef0;
+        }
+      }
+    }
   }
 }

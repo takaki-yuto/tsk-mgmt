@@ -27,6 +27,15 @@ $(function () {
   $(document).on('turbolinks:load', function () {
     $('[data-provider="summernote"]').each(function(){
       $(this).summernote({
+        toolbar: [
+          ['style', ['bold', 'italic', 'underline', 'clear']],
+          ['font', ['strikethrough', 'superscript', 'subscript']],
+          ['fontsize', ['fontsize']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['height', ['height']]
+        ],
+      placeholder: "本文を入力してください",
       lang: "ja-JP",
       height: 500,
       fontNames: ["YuGothic","Yu Gothic","Hiragino Kaku Gothic Pro","Meiryo","sans-serif", "Arial","Arial Black","Comic Sans MS","Courier New","Helvetica Neue","Helvetica","Impact","Lucida Grande","Tahoma","Times New Roman","Verdana"],
