@@ -27,6 +27,10 @@
                       削除
         %label 題名
         = f.text_field :title, placeholder: :タイトルを入力してください, class: :form_title
+        .error_message
+          = @report.errors.full_messages_for(:title)[0]
         %label 本文
         = f.text_area :message, placeholder: :ブログ本文を入力してください, class: :form_text, 'data-provider': :summernote
+        .error_message
+          = @report.errors.full_messages_for(:message)[0]
         = f.submit '送信する', class: "send-btn"

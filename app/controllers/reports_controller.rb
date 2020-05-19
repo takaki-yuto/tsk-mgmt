@@ -22,8 +22,14 @@ class ReportsController < ApplicationController
   end
 
   def create
-    Report.create(report_params)
-    redirect_to root_path
+    @report = Report.new(report_params)
+    if @report.save
+      redirect_to root_path
+    else
+      render :new
+    end
+    # Report.create(report_params)
+    # redirect_to root_path
   end
 
   def show
