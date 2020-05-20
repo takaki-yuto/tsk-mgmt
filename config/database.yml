@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: tsk-mgmt_production
-  username: tsk-mgmt
-  password: <%= ENV['TSK-MGMT_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
