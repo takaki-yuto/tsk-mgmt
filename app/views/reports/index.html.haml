@@ -13,7 +13,8 @@
                 タイトル：
                 = report.title
               .report-startmessage
-                本日の日報を提出いたします。
+                メッセージ：
+                = report.show_last_message
         .pagenate-box
           = paginate @myreports, param_name: 'myreport'
     .reply-content
@@ -29,7 +30,8 @@
                 タイトル：
                 = replyreport.title
               .report-startmessage
-                本日の日報を提出いたします。
+                メッセージ：
+                = replyreport.show_last_message
         .pagenate-box
           = paginate @replyreports_sin, param_name: 'replyreport'
     
