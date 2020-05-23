@@ -7,10 +7,10 @@ class Report < ApplicationRecord
 
   def show_last_message
     if (last_message = messages.last).present?
-      if last_message.content?
-        last_message.content
+      if last_message.content.size > 10
+        last_message.content.slice(0,10) + '...'
       else
-        '画像が投稿されています'
+        last_message.content
       end
     else
       'まだメッセージはありません。'
