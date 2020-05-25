@@ -1,24 +1,37 @@
-# README
+# サイト名
+tsk-mgmt
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# URL
+http://18.178.191.12/
 
-Things you may want to cover:
+# 作成経緯
+日報を確認してもらえないことがあり、情報伝達がうまくできなかった経験がありました。
+このミスを無くすために、日頃から確認する、予定表と日報の機能を組み合わせることで解決できると思い、
+このサイトを作成いたしました。
 
-* Ruby version
+# このサイトで可能なこと
+・日々の予定の管理
+・日報の送信及び、日報に対するメッセージのやり取り
 
-* System dependencies
+# フレームワーク及び、使用言語
+フレームワーク
+Ruby on Rails(Ver5.2.4.1)
 
-* Configuration
+使用言語
+HAML(ver5.1.2)
+SCSS(ver3.7.4)
+jquery(ver1.12.4)
+Ruby(ver2.5.1)
 
-* Database creation
+# 使用方法
+URL先を開くとログインページが表示されます。
+![トップページ](images/explanation/機能説明_トップページ.jpg "機能説明_トップページ")
 
-* Database initialization
+# License
+This software is released under the MIT License, see LICENSE.
 
-* How to run the test suite
+# Authors
+作者を明示する。特に、他者が作成したコードを利用する場合は、そのコードのライセンスに従った上で、リポジトリのそれぞれのコードのオリジナルの作者が誰か分かるように明示する（私はそれが良いと思い自主的にしています）。
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# References
+参考にした情報源（サイト・論文）などの情報、リンク
