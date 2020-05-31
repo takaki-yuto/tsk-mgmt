@@ -76,15 +76,7 @@ URL先を開くとログインページが表示されます。
 日報のメッセージの欄で、送信者及び、受信者のメッセージのやり取りが可能でございます。  
 ![日報詳細](app/assets/images/explanation/機能説明_日報詳細.jpg "機能説明_日報詳細")  
   
-# 今後実装したい機能及び改善点
-**・リファレンス**  
-ソースコード全体を見直すと可読性があまりよくないのでその修正を行いたい  
-**・ユーザビリティの向上**  
-日報のメッセージ機能についてLINEのように、自分が送ったメッセージと相手が送ったメッセージをわかるようにしたい  
-以下のサイトを参考にして実装を試みてみる。  
-https://qiita.com/tsueken/items/66053b4dc233faae4fbd
-
 # License
-Copyright (c) 2020 Yuuto Takaki
+Copyright (c) 2020 Yuuto Takaki  
 This software is released under the MIT License, see LICENSE.
 
