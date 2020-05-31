@@ -19,9 +19,4 @@
           = link_to "日報送信", new_report_path, class: "report-post", "data-turbolinks": false
           = link_to "日報管理", reports_path, class: "report-mgmt"
           = link_to  "予定追加", new_event_path, class: "right-btn"
-      -# - else
-      -#   .header-box
-      -#     = link_to  "tsk-mgmt", "/", class: "title-bar"
-      -#     = link_to "ログイン", new_user_session_path, class: 'left-btn'
-      -#     = link_to "新規登録", new_user_registration_path, class: 'right-btn'
     = yield
