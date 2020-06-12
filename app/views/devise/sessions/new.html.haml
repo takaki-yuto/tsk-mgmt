@@ -1,11 +1,9 @@
 .backimage-body
   = form_for(resource, as: resource_name, url: session_path(resource_name),html: { class: "form-body" }) do |f|
     .field-contener
-      -# .registration ログイン
       .registration-form
         .title-box
-          .title-name
-            tsk-mgmt
+          = image_tag "logo.png", class: "title-bar"
           .title-exposition
             日々の進捗管理と日報管理を一つにしてみませんか？
           %i.far.fa-calendar-alt.fa-8x.clender
