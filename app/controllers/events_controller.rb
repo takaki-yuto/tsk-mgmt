@@ -50,12 +50,12 @@ class EventsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    # ログインしているユーザーのイベントを全て持ってくる
     def set_event
       @event = Event.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
+    # 不要なデータを送信されないための対策
     def event_params
       params.require(:event).permit(:title, :description, :start_date, :end_date).merge(user_id: current_user.id)
     end
