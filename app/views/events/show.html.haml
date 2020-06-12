@@ -2,7 +2,7 @@
   .form-body-plan
     .field-contener-plan
       .registration 
-        = @event.start_date.strftime("%m月%d日") + "の予定"
+        = @event.start_date.strftime("%-m月%-d日") + "の予定"
       .form-box-plan
         .form-box
           .form-group
@@ -16,11 +16,11 @@
           .form-group
             %label 開始予定時間
             %br/
-            = @event.start_date.strftime("%Y年%m月%d日 %H時%M分")
+            = @event.start_date.strftime("%Y年%-m月%-d日 %-H時%-M分")
           .form-group
             %label 終了予定時間
             %br/
-            = @event.end_date.strftime("%Y年%m月%d日 %H時%M分")
+            = @event.end_date.strftime("%Y年%-m月%-d日 %-H時%-M分")
           .tsk-change-btn
             = link_to  @event, method: :delete, data: { confirm: '本当に予定を消しますか？' }, class: "link-btn" do
               %button.delete-btn{type: "submit"}
