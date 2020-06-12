@@ -1,5 +1,6 @@
 .backimage-body-report-show
   .myreport-content
+    // 日報の表示
     .myreport-box
       .title-box
         件名：
@@ -14,6 +15,8 @@
           ,
       .text-box
         = @report.message.html_safe
+
+    // メッセージ
     .message-content
       メッセージ
       - @messages.each do |message|
