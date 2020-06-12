@@ -12,7 +12,7 @@
           .form-group
             %label 内容
             %br/
-            = @event.description
+            = @event.description.html_safe
           .form-group
             %label 開始予定時間
             %br/

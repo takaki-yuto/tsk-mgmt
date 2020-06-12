@@ -10,7 +10,7 @@
             = event.errors.full_messages_for(:title)[0]
         .form-group
           = form.label :内容
-          = form.text_area :description, class: "text-field"
+          = form.text_area :description, class: "text-field", 'data-provider': :summernote
           .error_message
             = event.errors.full_messages_for(:description)[0]
         .form-group
