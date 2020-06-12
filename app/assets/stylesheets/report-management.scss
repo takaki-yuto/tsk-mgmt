@@ -125,6 +125,7 @@
       width: 60%;
       margin: 0 auto;
       border-radius: 10px;
+      border: 1px solid #ccc;
       background-color: white;
       .title-box {
         border-bottom: solid 1px #333;
@@ -138,7 +139,6 @@
       .text-box {
         height: 500px;
         overflow:auto;
-        border-bottom: solid 1px #333;
       }
     }
     .message-content {
@@ -148,6 +148,7 @@
       margin: 10px auto 10px;
       overflow: scroll;
       border-radius: 10px;
+      border: 1px solid #ccc;
       background-color: white;
       .message-box {
         width: 100%;
@@ -178,8 +179,8 @@
       .input-box {
         width: 100%;
         .text {
+          border: 1px solid #ccc;
           color: #434a54;
-          border-style: none;
           height: 50px;
           padding: 0px 40px 0px 10px;
           width: 89%;
@@ -190,6 +191,7 @@
           padding: 0 30px;
           margin-left: 10px;
           color: white;
+          border: 1px solid #ccc;
           background-color: #38aef0;
         }
       }
