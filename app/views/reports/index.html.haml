@@ -1,5 +1,6 @@
 .backimage-body-report
   .report-content
+    //送信BOX
     .myreport-content
       %label 送信BOX
       .report-box
@@ -17,6 +18,8 @@
                 = report.show_last_message
         .pagenate-box
           = paginate @myreports, param_name: 'myreport'
+
+    //受信BOX
     .reply-content
       %label 受信BOX
       .report-box
