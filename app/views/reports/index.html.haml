@@ -8,7 +8,7 @@
             = link_to report_path(report), class:"report-link-btn" do
               .report-time
                 日付：
-                = report.created_at.strftime("%Y年%m月%d日 %H時%M分")
+                = report.created_at.strftime("%Y年%-m月%-d日 %-H時%-M分")
               .report-title
                 タイトル：
                 = report.title
@@ -25,7 +25,7 @@
             = link_to report_path(replyreport), class:"report-link-btn" do
               .report-time
                 日付：
-                = replyreport.created_at.strftime("%Y年%m月%d日 %H時%M分")
+                = replyreport.created_at.strftime("%Y年%-m月%-d日 %-H時%-M分")
               .report-title
                 タイトル：
                 = replyreport.title
