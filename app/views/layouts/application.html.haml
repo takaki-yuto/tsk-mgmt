@@ -17,7 +17,11 @@
           .user-name
             = current_user.name
           = link_to "ログアウト", destroy_user_session_path, class: "left-btn",method: :delete
-          = link_to "日報送信", new_report_path, class: "report-post", "data-turbolinks": false
-          = link_to "日報管理", reports_path, class: "report-mgmt"
           = link_to  "予定追加", new_event_path, class: "right-btn"
+          = link_to "メール送信", new_report_path, class: "report-post", "data-turbolinks": false
+          .report-mgmt
+            = link_to "メール管理", reports_path
+            - if @read_flag_chack == 1
+              .unread-alert
+                %i.fas.fa-bell
     = yield

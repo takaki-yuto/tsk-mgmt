@@ -42,16 +42,35 @@
           }
           .title-exposition {
             margin: 20px 0 70px 20px;
+            text-align: center;
+            font-weight: bold;
+            span {
+              color: red;
+              font-size: 30px;
+            }
           }
           .clender {
-            margin-left: 80px;
-            color: blue;
+            color: white;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background-color: #67c5ff;
+            line-height: 180px;
+            padding: 0 32px;
+            cursor: pointer;
           }
           .plus {
             margin: 0 30px;
           }
           .report {
-            color: red;
+            color: white;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background-color: #67c5ff;
+            line-height: 180px;
+            padding: 0 32px;
+            cursor: pointer;
           }
         }
         .form-box {

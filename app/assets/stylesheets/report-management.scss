@@ -29,6 +29,7 @@
           transform: scale(1.08,1.08);
         }
         .report-group {
+          position: relative;
           border: 1px solid #ccc;
           margin: 30px auto;
           width: 90%;
@@ -36,6 +37,20 @@
           background-color: white;
           border-radius: 10px;
           transition: all 1s;
+          .unread-alert {
+            position: absolute;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #67c5ff;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            top: -10px;
+            right: -10px;
+          }
           .report-link-btn {
             text-decoration: none;
             color: black;
@@ -70,6 +85,7 @@
           transform: scale(1.08,1.08);
         }
         .report-group {
+          position: relative;
           border: 1px solid #ccc;
           margin: 30px auto;
           width: 90%;
@@ -77,6 +93,20 @@
           background-color: white;
           border-radius: 10px;
           transition: all 1s;
+          .unread-alert {
+            position: absolute;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #67c5ff;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            top: -10px;
+            right: -10px;
+          }
           .report-link-btn {
             text-decoration: none;
             color: black;

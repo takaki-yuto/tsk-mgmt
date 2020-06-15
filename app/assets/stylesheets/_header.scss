@@ -71,13 +71,30 @@ body {
       transition: .4s;
     }
     .report-mgmt {
+      position: relative;
       margin-right: 20px;
       padding: 0.3em 1em;
-      text-decoration: none;
-      color: #67c5ff;
       border: solid 2px #67c5ff;
       border-radius: 3px;
       transition: .4s;
+      a {
+        color: #67c5ff;
+        text-decoration: none;
+      }
+      .unread-alert {
+        position: absolute;
+        color: white;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: #67c5ff;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        top: -10px;
+        right: -10px;
+      }
     }
   }
 }

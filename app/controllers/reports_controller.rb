@@ -43,6 +43,12 @@ class ReportsController < ApplicationController
     @report = Report.find(params[:id])
     @fromuser = User.where(id: @report.user_id)
     @messages = @report.messages.includes(:user)
+    # 既読機能の処理
+    @read_flag_change = ReportUser.where(report_id: params[:id]).where(user_id: current_user)
+    # 未読だったらread_flagを1にする
+    if @read_flag_change[0].read_flag == 0
+      @read_flag_change[0].update(read_flag: 1)
+    end
   end
 
   private

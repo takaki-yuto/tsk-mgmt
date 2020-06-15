@@ -6,6 +6,12 @@
       .report-box
         - @myreports.each do |report|
           .report-group
+            - report_records = report.report_users
+            - report_records.each do |report_record|
+              - if report_record.user_id == current_user.id
+                - if report_record.read_flag == 0
+                  .unread-alert
+                    %i.fas.fa-bell
             = link_to report_path(report), class:"report-link-btn" do
               .report-time
                 日付：
@@ -25,6 +31,12 @@
       .report-box
         - @replyreports_sin.each do |replyreport|
           .report-group
+            - report_records = replyreport.report_users
+            - report_records.each do |report_record|
+              - if report_record.user_id == current_user.id
+                - if report_record.read_flag == 0
+                  .unread-alert
+                    %i.fas.fa-bell
             = link_to report_path(replyreport), class:"report-link-btn" do
               .report-time
                 日付：
@@ -37,4 +49,3 @@
                 = replyreport.show_last_message
         .pagenate-box
           = paginate @replyreports_sin, param_name: 'replyreport'
-    
