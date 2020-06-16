@@ -6,11 +6,12 @@
       .registration-form
         .form-box
           .form-group
-            = f.label :名前
+            = f.label :ニックネーム
             = f.text_field :name, autofocus: true, maxlength: "6", class: "text-field", placeholder: "最大6文字まで入力できます"
           .form-group
             = f.label :メールアドレス
             = f.email_field :email, autofocus: true, autocomplete: "email", class: "text-field", placeholder: "PC・携帯どちらでも可"
+            ※パスワードを忘れたのご連絡先です。
           .form-group
             = f.label :パスワード
             = f.password_field :password, autocomplete: "new-password", class: "text-field", placeholder: "6文字以上で入力してください"

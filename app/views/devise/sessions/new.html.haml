@@ -15,8 +15,8 @@
           %i.fas.fa-8x.fa-bell.report
         .form-box
           .form-group
-            = f.label :メールアドレス
-            = f.email_field :email, autofocus: true, autocomplete: "email", class: "text-field", placeholder: "メールアドレスを入力してください"
+            = f.label :ニックネーム
+            = f.text_field :name, autofocus: true, autocomplete: "name", class: "text-field", placeholder: "ニックネームを入力してください"
           .form-group
             = f.label :パスワード
             = f.password_field :password, autocomplete: "current-password", class: "text-field", placeholder: "パスワードを入力してください"
